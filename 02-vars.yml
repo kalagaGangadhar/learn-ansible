@@ -1,0 +1,15 @@
+- name: vars
+  hosts: web
+  become: true
+  vars:
+    URL: www.google.com
+  tasks:
+    - name: print variable
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+
+    - name: print task variable
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+      vars:
+        URL: tasks.google.com
