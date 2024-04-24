@@ -14,7 +14,7 @@
         enabled: yes
 
 - name: Install nginx
-  hosts: web
+  hosts: app
   become: true
   roles:
     - sample
