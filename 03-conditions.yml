@@ -1,0 +1,16 @@
+- name: conditions
+  hosts: all
+  become: true
+  vars:
+    fruits: true
+    vegetables: false
+  tasks:
+    - name: print fruit-name
+      ansible.builtin.debug:
+        msg: fruit - apple
+        when: fruits is true
+
+    - name: print vegetable-name
+      ansible.builtin.debug:
+        msg: vegetable - potato
+        when: vegetables is true
