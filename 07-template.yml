@@ -1,9 +1,0 @@
-- name: demo on template
-  hosts: localhost
-  vars:
-    fruit: apple
-  tasks:
-    - name: copy and replace
-      ansible.builtin.template:
-        src: test.txt
-        dest: /tmp/test.txt
