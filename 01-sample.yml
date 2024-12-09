@@ -13,3 +13,8 @@
         state: started
         enabled: yes
 
+- name: install Nginx
+  hosts: app
+  become: true
+  roles:
+    - sample
