@@ -4,15 +4,23 @@
     fruits:
       - apple
       - orange
+    vegies:
+      - {name: orange, quantity: 100}
+      - {name: mango, quantity: 200}
   tasks:
     - name: print fruits
       ansible.builtin.debug:
         msg: fruit name - {{item}}
       loop: "{{fruits}}"
 
-    - name: print fruits
+    - name: print fruits local values
       ansible.builtin.debug:
         msg: fruit name - {{item}}
       loop:
         - apple
         - kiwi
+
+    - name: print vegies name quantity
+      ansible.builtin.debug:
+        msg: fruit name - {{item.name}}, quantity - {{item.quantity}}
+      loop: "{{vegies}}"
