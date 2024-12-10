@@ -9,3 +9,10 @@
       ansible.builtin.debug:
         msg: fruit name - {{item}}
       loop: "{{fruits}}"
+
+    - name: print fruits
+      ansible.builtin.debug:
+        msg: fruit name - {{item}}
+      loop:
+        - apple
+        - kiwi
