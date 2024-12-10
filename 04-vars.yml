@@ -1,6 +1,6 @@
 - name: variable precedence
   hosts: all
-  vars:
-    URL: play.google.com
+#  vars:
+#    URL: play.google.com
   roles:
     - sample
